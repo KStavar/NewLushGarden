@@ -1,0 +1,160 @@
+.div-what-we-offer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 35px;
+}
+
+.h2-what-we-offer {
+    color: rgb(40, 90, 67);
+}
+
+.div-all-cactus-plants {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: center;
+    gap: 20px;
+}
+
+.cactus-plant {
+    border-radius: 10px;
+    height: 314px;
+    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.02);
+    color: rgb(51, 122, 91);
+    font-size: 16px;
+}
+
+.img-cactus-plant {
+    width: 100%;
+}
+
+.a-button-cactus-plant {
+    color: rgba(51, 122, 91);
+    cursor: pointer;
+    font-size: 12px;
+    border: 1px solid rgba(51, 122, 91, 0.6);
+    border-radius: 3px;
+    transition-duration: 0.3s;
+    padding: 8px 24px 8px 24px;
+    font-weight: 900;
+    margin-left: 35px;
+    margin-right: 23px;
+    text-decoration: none;
+}
+
+.a-button-cactus-plant:hover {
+    color: white;
+    background-color: rgba(51, 122, 91);
+}
+
+.p-cactus-plant {
+    font-weight: 900;
+    text-align: left;
+    margin-left: 24px;
+    margin-top: 10px;
+}
+
+.p-price {
+    font-size: 12px;
+    font-weight: 700;
+    margin-top: 5px;
+    margin-left: 24px;
+    margin-bottom: 10px;
+    width: 14px;
+    height: 17px;
+}
+
+.div-cactus-and-price {
+    display: flex;
+    grid-template-columns: auto auto;
+    justify-content: baseline;
+    align-items: center;
+}
+
+@media (max-width: 1280px) {
+    .cactus-plant {
+        width: 100%;
+        height: 100%;
+        font-size: 14px;
+    }
+
+    .div-all-cactus-plants {
+        display: grid;
+        gap: 2%;
+        padding: 0px 15px 0px 15px;
+    }
+
+    .div-cactus-and-price {
+        display: grid;
+        align-items: center;
+        justify-content: space-between;
+        justify-items: center;
+    }
+
+    .a-button-cactus-plant {
+        font-size: 90%;
+        font-weight: 900;
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 980px) {
+    .p-cactus-plant {
+        font-size: 12px;
+    }
+
+    .a-button-cactus-plant {
+        font-size: 10px;
+        font-weight: 900;
+        margin-left: 30%;
+        display: inline;
+        white-space: nowrap;
+        padding: 7px 15px 7px 15px;
+    }
+
+    .div-cactus-and-price {
+        display: grid;
+        align-items: center;
+        justify-content: start;
+        justify-items: center;
+    }
+}
+
+@media (max-width: 880px) {
+    .cactus-plant {
+        width: 100%;
+        height: 50%;
+    }
+
+    .div-all-cactus-plants {
+        display: grid;
+        gap: 5%;
+        padding: 0px 15px 0px 15px;
+        grid-template-columns: auto auto;
+        z-index: 1;
+    }
+
+    .div-cactus-and-price {
+        display: grid;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .p-cactus-plant {
+        font-size: 16px;
+    }
+
+    .a-button-cactus-plant {
+        font-size: 90%;
+        font-weight: 900;
+        white-space: nowrap;
+        margin: 10px;
+    }
+}
+
+@media (max-width: 500px) {
+    .div-all-cactus-plants {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+}
