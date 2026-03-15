@@ -5,6 +5,7 @@ import '@/style/Header.css'
 import { usePathname } from "next/navigation"
 import { useState } from "react"
 import Modal from "./ModalWindow"
+import Contact from "./Contact"
 export default function Header() {
   const pathname = usePathname()
   const [open, setOpen] = useState(false);
@@ -22,11 +23,12 @@ export default function Header() {
           <li className="nav-list-item"><Link href="/" className="a-nav-list-item">Home</Link></li>
           <li className="nav-list-item"><Link href="/about-us" className="a-nav-list-item">About Us</Link></li>
           <li className="nav-list-item"><Link href="/gallery" className="a-nav-list-item">Gallery</Link></li>
-          <li className="nav-list-item">Contact</li>
+          <li className="contact-nav-list-item" onClick={() => setOpen(!open)}>Contact</li>
           <li className="separated-a-nav-list-item" onClick={() => setOpen(!open)}>Details</li>
 
         </ul>
       </nav>
+      {open && <Contact onClose={() => setOpen(false)}/>}
       {open && <Modal onClose={() => setOpen(false)}/>}
     </header>
   )
