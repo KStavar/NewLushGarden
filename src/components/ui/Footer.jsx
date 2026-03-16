@@ -1,49 +1,42 @@
 import Image from "next/image"
 import Link from "next/link"
-import '@/style/Footer.css'
+import styles from '@/style/Footer.module.css'
+import footerData from '@/data/footer.json'
+
 export default function Footer() {
   return (
-    <footer className="footer">
+    <footer className={styles.footer}>
+      <div className={styles.divFooter}>
 
-      <div className="div-footer">
-
-        <div className="div-footer-contacts">
-          Feel free to contact us
+        <div className={styles.divFooterContacts}>
+          {footerData.contacts}
         </div>
 
-        <div className="div-footer-icons">
-
-          <Link href="https://instagram.com" className="footer-icon">
-            <Image src="/instagram.svg" width={30} height={30} alt="instagram" />
-          </Link>
-
-          <Link href="https://facebook.com" className="footer-icon">
-            <Image src="/facebook-f.svg" width={30} height={30} alt="facebook" />
-          </Link>
-
-          <Link href="https://x.com" className="footer-icon">
-            <Image src="/twitter.svg" width={30} height={30} alt="twitter" />
-          </Link>
-
+        <div className={styles.divFooterIcons}>
+          {footerData.socials.map((social, index) => (
+            <Link key={index} href={social.href} className={styles.footerIcon}>
+              <Image src={social.icon} width={30} height={30} alt={social.alt} />
+            </Link>
+          ))}
         </div>
 
-        <ul className="ul-footer">
-          <li><Link href="/">Home</Link></li>
-          <li><Link href="/about-us">About us</Link></li>
-          <li><Link href="/gallery">Gallery</Link></li>
-          <li>Delivery</li>
-          <li>Blog</li>
-          <li>Contact us</li>
-
-
+        <ul className={styles.ulFooter}>
+          {footerData.links.map((link, index) => (
+            <li key={index} className={styles.divFooterLi}>
+              {link.href ? (
+                <Link href={link.href} className={styles.aUlFooter}>{link.label}</Link>
+              ) : (
+                link.label
+              )}
+            </li>
+          ))}
         </ul>
 
-        <div className="copyright">
-          Copyright © 2024 Lush. All rights reserved.
+        <div className={styles.copyright}>
+          {footerData.copyright}
         </div>
 
       </div>
-
     </footer>
   )
 }

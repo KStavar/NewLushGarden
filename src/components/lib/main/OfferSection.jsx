@@ -1,5 +1,5 @@
 import Image from "next/image"
-import '@/style/OfferSection.css'
+import styles from '@/style/OfferSection.module.css'
 
 const plants = [
   { img: "/Rectangle 21.png", name: "Cactus Plant", price: "8$" },
@@ -14,31 +14,31 @@ const plants = [
 
 export default function OfferSection() {
   return (
-    <section className="what-we-offer">
+    <section className={styles.whatWeOffer}>
 
-      <div className="div-what-we-offer">
-        <h2 className="h2-what-we-offer">What We Offer To You</h2>
+      <div className={styles.divWhatWeOffer}>
+        <h2 className={styles.h2WhatWeOffer}>What We Offer To You</h2>
       </div>
       
-      <div className="div-all-cactus-plants">
+      <div className={styles.divAllCactusPlants}>
         {plants.map((plant, index) => (
-          <div className="cactus-plant" key={index}>
+          <div className={styles.cactusPlant} key={index}>
 
-            <Image className="img-cactus-plant"
+            <Image
+              className={styles.imgCactusPlant}
               src={plant.img}
               width={250}
               height={250}
               alt={plant.name}
             />
 
-            <div className="div-cactus-and-price">
+            <div className={styles.divCactusAndPrice}>
               <div>
-                <p className="p-cactus-plant">{plant.name}</p>
-                <p className="p-price">{plant.price}</p>
+                <p className={styles.pCactusPlant}>{plant.name}</p>
+                <p className={styles.pPrice}>{plant.price}</p>
               </div>
 
-              <a href="#" className="a-button-cactus-plant">Buy Now</a>
-
+              <a href="#" className={styles.buttonCactusPlant}>Buy Now</a>
             </div>
           </div>
         ))}

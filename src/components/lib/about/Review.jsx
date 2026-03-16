@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Rewie() {
+export default function Review() {
   return (
     <div>
       

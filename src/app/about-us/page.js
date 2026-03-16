@@ -1,5 +1,5 @@
 import AboutProducts from '@/components/lib/about/AboutProducts'
-import Rewie from '@/components/lib/about/Rewie'
+import Rewie from '@/components/lib/about/Review'
 import React from 'react'
 
 export default function AboutUs() {

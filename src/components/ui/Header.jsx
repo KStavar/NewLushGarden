@@ -1,35 +1,43 @@
 'use client'
 import Image from "next/image"
 import Link from "next/link"
-import '@/style/Header.css'
+import styles from '@/style/Header.module.css'
 import { usePathname } from "next/navigation"
 import { useState } from "react"
 import Modal from "./ModalWindow"
 import Contact from "./Contact"
+
 export default function Header() {
   const pathname = usePathname()
   const [open, setOpen] = useState(false);
+  const [openContact, setOpenContact] = useState(false);
 
   return (
-    <header className={(pathname == '/') ? "header" : 'header-gradient'}>
-      <div className="logo">
+    <header className={pathname === '/' ? styles.header : styles.headerGradient}>
+      <div className={styles.logo}>
         <Link href="/">
           <Image src="/Mask_group.png" width={100} height={60} alt="logo" />
         </Link>
       </div>
 
-      <nav>
-        <ul className="nav-list">
-          <li className="nav-list-item"><Link href="/" className="a-nav-list-item">Home</Link></li>
-          <li className="nav-list-item"><Link href="/about-us" className="a-nav-list-item">About Us</Link></li>
-          <li className="nav-list-item"><Link href="/gallery" className="a-nav-list-item">Gallery</Link></li>
-          <li className="contact-nav-list-item" onClick={() => setOpen(!open)}>Contact</li>
-          <li className="separated-a-nav-list-item" onClick={() => setOpen(!open)}>Details</li>
-
+      <nav className={styles.navContainer}>
+        <ul className={styles.navList}>
+          <li className={styles.navListItem}>
+            <Link href="/" className={styles.navLink}>Home</Link>
+          </li>
+          <li className={styles.navListItem}>
+            <Link href="/about-us" className={styles.navLink}>About Us</Link>
+          </li>
+          <li className={styles.navListItem}>
+            <Link href="/gallery" className={styles.navLink}>Gallery</Link>
+          </li>
+          <li className={styles.contactNavListItem} onClick={() => setOpenContact(!openContact)}>Contact</li>
+          <li className={styles.separatedNavListItem} onClick={() => setOpen(!open)}>Details</li>
         </ul>
       </nav>
-      {open && <Contact onClose={() => setOpen(false)}/>}
-      {open && <Modal onClose={() => setOpen(false)}/>}
+
+      {openContact && <Contact onClose={() => setOpenContact(false)} />}
+      {open && <Modal onClose={() => setOpen(false)} />}
     </header>
   )
 }

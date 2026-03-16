@@ -1,0 +1,17 @@
+{
+  "contacts": "Feel free to contact us",
+  "socials": [
+    { "href": "https://instagram.com", "icon": "/instagram.svg", "alt": "instagram" },
+    { "href": "https://facebook.com", "icon": "/facebook-f.svg", "alt": "facebook" },
+    { "href": "https://x.com", "icon": "/twitter.svg", "alt": "twitter" }
+  ],
+  "links": [
+    { "label": "Home", "href": "/" },
+    { "label": "About us", "href": "/about-us" },
+    { "label": "Gallery", "href": "/gallery" },
+    { "label": "Delivery", "href": null },
+    { "label": "Blog", "href": null },
+    { "label": "Contact us", "href": null }
+  ],
+  "copyright": "Copyright © 2024 Lush. All rights reserved."
+}

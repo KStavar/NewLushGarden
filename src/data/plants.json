@@ -1,0 +1,30 @@
+{
+  "title": "We Help Choose The Most Suitable Plants For You",
+  "description": "Our selection includes a wide variety of flowers, from classic roses to exotic orchids, as well as a variety of lush indoor and outdoor plants and also offer unique floral arrangements.",
+  "types": [
+    {
+      "id": "indoorPlants",
+      "image": "/Indoor_Plant.svg",
+      "title": "Indoor Plants",
+      "description": "Bring a touch of greenery to your living spaces with our collection of indoor plants.",
+      "classTitle": "h2Plants",
+      "classDescription": "pPlants"
+    },
+    {
+      "id": "outdoorPlants",
+      "image": "/Outdoor_Plant.svg",
+      "title": "Outdoor Plants",
+      "description": "Bring the beauty of nature to your outdoor spaces with our wide selection of outdoor plants.",
+      "classTitle": "h2OutdoorPlants",
+      "classDescription": "pOutdoorPlants"
+    },
+    {
+      "id": "plantsPots",
+      "image": "/Bamboo 257.svg",
+      "title": "Plants Pots",
+      "description": "Add a touch of style to your indoor or outdoor spaces with our collection of pots plants.",
+      "classTitle": "h2Plants",
+      "classDescription": "pPlants"
+    }
+  ]
+}
