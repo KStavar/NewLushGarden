@@ -4,7 +4,7 @@ import Link from "next/link"
 import styles from '@/style/Header.module.css'
 import { usePathname } from "next/navigation"
 import { useState } from "react"
-import Modal from "./ModalWindow"
+import Modal from "../lib/ModalWindow"
 import Contact from "./Contact"
 
 export default function Header() {

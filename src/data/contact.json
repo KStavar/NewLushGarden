@@ -1,0 +1,7 @@
+[
+  { "label": "Call us:", "value": "+987 654 3210" },
+  { "label": "E-mail:", "value": "contact@lushgardenexample.com", "href": "https://mail.google.com" },
+  { "label": "YouTube:", "value": "Lush Garden Channel", "href": "https://youtube.com" },
+  { "label": "Instagram:", "value": "@Lush.Garden", "href": "https://instagram.com" },
+  { "label": "Facebook:", "value": "Lush Garden World", "href": "https://facebook.com" }
+]

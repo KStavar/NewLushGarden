@@ -1,0 +1,74 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  width: 50%;
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalClose {
+  top: 10px;
+  right: 12px;
+  color: rgb(0, 0, 0);
+  border: none;
+  background: none;
+  font-size: 38px;
+  margin-left: 90px;
+  margin-bottom: 175px;
+}
+
+.modalClose:hover {
+  color: rgb(247, 31, 31);
+  cursor: pointer;
+}
+
+.contactContent {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  background-color: whitesmoke;
+  border-radius: 10px;
+}
+
+.info {
+  font-size: 15px;
+}
+
+.info p {
+  margin-bottom: 15px;
+}
+
+
+.contactContent h2 {
+  color: #869991;
+  font-size: 35px;
+  font-weight: 700;
+  margin-right: 70px;
+  margin-left: 70px;
+}
+
+@keyframes modalFade {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
