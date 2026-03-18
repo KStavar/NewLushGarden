@@ -3,18 +3,16 @@ import Image from "next/image"
 import Link from "next/link"
 import modalStyles from '@/style/ModalWindow.module.css'
 import headerStyles from '@/style/Header.module.css'
-import { usePathname } from "next/navigation"
 import { useState } from "react"
 import ModalWindow from "../lib/ModalWindow"
 import Contact from "./Contact"
 
 export default function Header() {
-  const pathname = usePathname()
   const [open, setOpen] = useState(false);
   const [openContact, setOpenContact] = useState(false);
 
   return (
-    <header className={pathname === '/' ? headerStyles.header : headerStyles.headerGradient}>
+    <header className={headerStyles.header}>
       <div className={headerStyles.logo}>
         <Link href="/">
           <Image src="/Mask_group.png" width={100} height={60} alt="logo" />

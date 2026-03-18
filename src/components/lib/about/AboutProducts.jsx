@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import  '@/style/AboutProducts.css'
 export default function AboutProducts() {
   return (
     <section className="sec-about-products">
