@@ -1,0 +1,125 @@
+.divWDTSAU {
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.h2WDTSAU {
+    color: rgb(40, 90, 67);
+}
+
+
+.divReview {
+    margin-top: 35px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 30px; 
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
+
+.reviewH3Img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.review {
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-around;
+    align-items: center;
+    width: 100%; 
+    max-width: 360px;
+    height: 329px;
+    background-color: #F8F8F8;
+    border-radius: 10px;
+    font-size: 16px;
+    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.09);
+    padding: 20px; 
+    box-sizing: border-box;
+} 
+
+.h3Review {
+    color: #285A43;
+    margin: 0;
+}
+
+.pReview {
+    width: 100%;
+    max-width: 243px;
+    text-align: center;
+    margin-bottom: 10%;
+}
+
+.addReviewBtn{
+    width: 250px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid rgb(40, 90, 67);
+    border-radius: 3px;
+    color: rgb(40, 90, 67);
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 15px;
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+
+.addReviewBtn:hover {
+    color: white;
+    background-color: rgba(51, 122, 91);
+}
+
+.divBtn {
+    display: flex;
+    justify-content: center;
+    margin-top:20px;
+}
+
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+
+
+
+
+
+.avatarWrapper {
+    width: 60px;
+    height: 60px;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+
+.ratingInfo {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+    font-size: 14px;
+}
+
+.stars {
+    color: #869991;
+    font-weight: bold;
+}
+
+.ratingNumber {
+    font-size: 12px;
+    color: #666;
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "icon": "/Time-Cosuming 1.svg",
+    "title": "Quality Product",
+    "text": "Our flowers are of the highest quality, carefully selected and sourced from reputable"
+  },
+  {
+    "id": 2,
+    "icon": "/Grow_Sprout.svg",
+    "title": "Always Fresh",
+    "text": "Our flowers are always fresh, handpicked and delivered promptly for maximum longevity and enjoyment."
+  },
+  {
+    "id": 3,
+    "icon": "/Temperature 1.svg",
+    "title": "Work Smart",
+    "text": "We work smart, using innovative techniques and technology to streamline our processes"
+  },
+  {
+    "id": 4,
+    "icon": "/Pruning 1.svg",
+    "title": "Excellent Service",
+    "text": "We pride ourselves on providing excellent service, going above and beyond to meet our customers' needs"
+  }
+]

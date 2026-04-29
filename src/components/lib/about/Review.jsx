@@ -1,40 +1,68 @@
-import React from 'react'
-import '@/style/Review.css'
+'use client'
+import React, { useState } from 'react'
+import styles from '@/style/Review.module.css'
+import ModalWindow from '../../lib/ModalWindow'
+import ReviewForm from '../../lib/ReviewForm'
 
-export default function Review() {
+export default function Review({ reviews }) {
+  const [isOpen, setIsOpen] = useState(false);
+  const avatars = ['🌵', '🌿', '🌱', '🍃', '🌻', '🌸', '🪴', '🍀', '🌞', '✨'];
+
   return (
     <div>
-       <section className="sec-w-d-t-s-a-u">
-        <div className="div-w-d-t-s-a-u">
-            <h2 className="h2-w-d-t-s-a-u">What Do They Say About Us</h2>
+      <section className={styles.secWDTSAU}>
+        <div className={styles.divWDTSAU}>
+          <h2 className={styles.h2WDTSAU}>What Do They Say About Us</h2>
         </div>
 
-        <div className="div-review">
-            <div className="review">
-                <div className="review-h3-img"> <img src="/Rectangle@1x.png" alt=""/>
-                    <h3 className="h3-review">Doris Watson</h3>
-                </div>
-                <p className="p-review">“Highly recommend this website for quality flowers and plants. Great prices, timely
-                    delivery and
-                    excellent customer service. ”</p>
-            </div>
-            <div className="review">
-                <div className="review-h3-img"> <img src="/Rectangle@2x.png" alt=""/>
-                    <h3 className="h3-review">Kate Shu</h3>
-                </div>
-                <p className="p-review">"Great service, beautiful flowers, timely delivery. Highly recommend.”</p>
-            </div>
-            <div className="review">
-                <div className="review-h3-img">
-                    <img src="/Rectangle3.png" alt=""/>
-                    <h3 className="h3-review">Dyness</h3>
-                </div>
-                <p className="p-review">"I am very happy with my purchase from this website, the plants were healthy and
-                    arrived on time.”</p>
-            </div>
+        {/* Кнопка открытия */}
+        <div className={styles.buttonContainer}>
+          <button className={styles.addReviewBtn} onClick={() => setIsOpen(true)}>
+            Leave Your Review
+          </button>
         </div>
-    </section>
 
+        <div className={styles.divReview}>
+          {reviews && reviews.length > 0 ? (
+            reviews.map((review, index) => {
+              const item = review.attributes || review;
+              const emojiAvatar = avatars[index % avatars.length];
+              
+              const rating = item.Rating || 5;
+              const firstRow = "⭐".repeat(Math.min(rating, 5));
+              const secondRow = rating > 5 ? "⭐".repeat(rating - 5) : null;
+
+              return (
+                <div key={review.id} className={styles.review}>
+                  <div className={styles.reviewH3Img}>
+                    <div className={styles.avatarWrapper}>
+                      {emojiAvatar}
+                    </div>
+                    
+                    <div>
+                      <h3 className={styles.h3Review}>{item.Name}</h3>
+                      <div className={styles.ratingInfo}>
+                        <span className={styles.stars}>{firstRow}</span>
+                        {secondRow && <span className={styles.stars}>{secondRow}</span>}
+                        <span className={styles.ratingNumber}>({rating}/10)</span>
+                      </div>
+                    </div>
+                  </div>
+                  <p className={styles.pReview}>{item.Comment}</p>
+                </div>
+              );
+            })
+          ) : (
+            <p style={{textAlign: 'center', color: 'white'}}>No reviews yet.</p>
+          )}
+        </div>
+      </section>
+
+      {isOpen && (
+        <ModalWindow onClose={() => setIsOpen(false)} title="Share your experience">
+          <ReviewForm onClose={() => setIsOpen(false)} />
+        </ModalWindow>
+      )}
     </div>
   )
 }

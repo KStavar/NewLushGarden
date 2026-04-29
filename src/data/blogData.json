@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "image": "/girl.png",
+    "title": "More productive with an atmosphere",
+    "desc": "An atmosphere of greenery can increase productivity in the workplace. Studies show that plants improve air quality and decrease stress...",
+    "date": "January 20, 2023"
+  },
+  {
+    "id": 2,
+    "image": "/bed.png",
+    "title": "The benefits of plants in your room",
+    "desc": "Plants in your room can bring numerous benefits, such as improved air quality, reduced stress, and increased feelings of well-being....",
+    "date": "January 20, 2023"
+  },
+  {
+    "id": 3,
+    "image": "/garndma.png",
+    "title": "Hobbyist plants in the house",
+    "desc": "Having hobbyist plants in the house is a great way to bring nature indoors. Not only do they purify the air, but they....",
+    "date": "January 20, 2023"
+  }
+]

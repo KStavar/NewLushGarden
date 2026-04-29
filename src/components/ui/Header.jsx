@@ -1,15 +1,15 @@
 'use client'
 import Image from "next/image"
 import Link from "next/link"
-import modalStyles from '@/style/ModalWindow.module.css'
 import headerStyles from '@/style/Header.module.css'
 import { useState } from "react"
 import ModalWindow from "../lib/ModalWindow"
 import Contact from "./Contact"
+import ReviewForm from "../lib/ReviewForm"
 
 export default function Header() {
-  const [open, setOpen] = useState(false);
   const [openContact, setOpenContact] = useState(false);
+  const [openReview, setOpenReview] = useState(false);
 
   return (
     <header className={headerStyles.header}>
@@ -30,28 +30,23 @@ export default function Header() {
           <li className={headerStyles.navListItem}>
             <Link href="/gallery" className={headerStyles.navLink}>Gallery</Link>
           </li>
-          <li className={headerStyles.contactNavListItem} onClick={() => setOpenContact(!openContact)}>Contact</li>
-          <li className={headerStyles.separatedNavListItem} onClick={() => setOpen(!open)}>Details</li>
+          <li className={headerStyles.contactNavListItem} onClick={() => setOpenContact(!openContact)}>
+            Contact
+          </li>
+          <li className={headerStyles.separatedNavListItem} onClick={() => setOpenReview(true)}>
+            Review
+          </li>
         </ul>
       </nav>
 
       {openContact && <Contact onClose={() => setOpenContact(false)} />}
 
-      {open && (
+      {openReview && (
         <ModalWindow
-          onClose={() => setOpen(false)} 
-          title="Enter Your Email Address For Our Mailing Promo"
+          onClose={() => setOpenReview(false)}
+          title="What Do You Think About Us?"
         >
-          <input
-            type="email"
-            placeholder="Enter your email"
-            className={`${modalStyles.inputEmail} ${headerStyles.inputEmailExtra}`}
-          />
-          <button className={`${modalStyles.submitButton} ${headerStyles.specialButton}`}>
-            <a className={`${modalStyles.navLink} ${headerStyles.navLinkExtra}`} href={window.location.pathname}>
-              <p>Submit</p>
-            </a>
-          </button>
+          <ReviewForm onClose={() => setOpenReview(false)} />
         </ModalWindow>
       )}
     </header>

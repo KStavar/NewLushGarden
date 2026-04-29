@@ -1,37 +1,43 @@
 import React from 'react'
 import Image from 'next/image'
-import  '@/style/AboutProducts.css'
+import styles from '@/style/AboutProducts.module.css'
+import productsData from '@/data/aboutProducts.json' 
+
 export default function AboutProducts() {
   return (
-    <section className="sec-about-products">
+    <section className={styles.secAboutProducts}>
+      <div className={styles['divH2About']}>
+        <h2 className={styles['h2About']}>About Us</h2>
+        </div>
 
-            <Image className="img-about-products" src="/pexels-cottonbro-studio-4507715 1.png" alt="" width={126} height={126}/>
-            <div className="about-products">
-                <div className="div-products">
-                    <Image className="products-svg" src="/Time-Cosuming 1.svg" alt="" width={126} height={126}/>
-                    <h3 className="h3-products">Quality Product</h3>
-                    <p className="p-products">Our flowers are of the highest quality, carefully selected and sourced from
-                        reputable</p>
-                   </div>
-                <div className="div-products">
-                    <Image className="products-svg" src="/Grow_Sprout.svg" alt="" width={126} height={126}/>
-                    <h3 className="h3-products">Always Fresh</h3>
-                    <p className="p-products">Our flowers are always fresh, handpicked and delivered promptly for maximum
-                        longevity and enjoyment.</p>
-                </div>
-                <div className="div-products">
-                    <Image className="products-svg" src="/Temperature 1.svg" alt="" width={126} height={126}/>
-                    <h3 className="h3-products">Work Smart</h3>
-                    <p className="p-products">We work smart, using innovative techniques and technology to streamline our
-                        processes</p>
-                </div>
-                <div className="div-products">
-                    <Image className="products-svg" src="/Pruning 1.svg" alt=""width={126} height={126} />
-                    <h3 className="h3-products">Excelent Service</h3>
-                    <p className="p-products">We pride ourselves on providing excellent service, going above and beyond to
-                        meet our customers' needs</p>
-                </div>
-            </div>
-        </section>
+        <div className={styles['divH2Empty']}>
+        </div>
+
+
+      <div className={styles.innerdivAboutProducts}>
+      <Image 
+        className={styles.imgAboutProducts} 
+        src="/pexels-cottonbro-studio-4507715 1.png" 
+        alt="Flowers" 
+        width={1200} 
+        height={1200}
+      />
+      <div className={styles.aboutProducts}>
+        {productsData.map(product => (
+          <div key={product.id} className={styles.divProducts}>
+            <Image 
+              className={styles.productsSvg} 
+              src={product.icon} 
+              alt={product.title} 
+              width={126} 
+              height={126} 
+            />
+            <h3 className={styles.h3Products}>{product.title}</h3>
+            <p className={styles.pProducts}>{product.text}</p>
+          </div>
+        ))}
+        </div>
+      </div>
+    </section>
   )
 }

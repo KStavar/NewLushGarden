@@ -1,0 +1,94 @@
+.divH2About {
+display: flex;
+justify-content: center;
+align-items: center;
+    height: 200px;
+    background-image: linear-gradient(#8da299, #93b0a5);
+    width: 100%;
+}
+
+.h2Gallery {
+    margin-top: 110px;
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    color: white;
+}
+
+.divH2Empty {
+    height: 100%;
+    min-height: 105px;
+    width: 100%;
+    background-image: linear-gradient(#93b0a5, #ffffff);
+    background-size: cover;
+}
+
+
+.gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ourGalView {
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(#93b0a5, #f8f8f8);
+    width: 100%;
+}
+
+.h2OurGallery {
+    display: flex;
+    justify-content: center;
+    color: #285A43;
+    font-size: 36px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+
+}
+
+.divImages {
+    justify-content: center;
+    align-items: center;
+    width: 1400px;
+
+}
+
+.images {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    justify-content: center;
+
+}
+
+.image:hover {
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.399);
+
+}
+
+.rightImgs {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+    margin: 0px 0px 0px 10px;
+}
+
+.lImage:hover {
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.399);
+}
+
+.lImage {
+    width: 30%;
+    cursor: pointer;
+    border-radius: 7px;
+}
+
+.image {
+    cursor: pointer;
+    width: 100%;
+    height: auto;
+    border-radius: 7px
+}
+

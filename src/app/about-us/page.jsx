@@ -1,19 +1,28 @@
-import AboutProducts from '@/components/lib/about/AboutProducts'
-import Rewie from '@/components/lib/about/Review'
-import React from 'react'
+import AboutProducts from "@/components/lib/about/AboutProducts"
+import Review from "@/components/lib/about/Review"
 
-export default function AboutUs() {
-    return (
-        <>
+async function getReviews() {
+  try {
+    const res = await fetch('http://127.0.0.1:1337/api/reviews', { 
+      cache: 'no-store',
+    });
+    
+    if (!res.ok) throw new Error('Failed to fetch');
+    const json = await res.json();
+    return json.data;
+  } catch (error) {
+    console.error("Strapi Error:", error);
+    return []; 
+  }
+}
 
-            <div className="div-h2-about">
-                <h2 className="h2-about">About Us</h2>
-            </div>
-            <div className="div-h2-empty">
+export default async function AboutUsPage() {
+  const reviews = await getReviews();
 
-            </div>
-            <AboutProducts />
-            <Rewie />
-        </>
-    )
+  return (
+    <main>
+      <AboutProducts />
+      <Review reviews={reviews} />
+    </main>
+  )
 }

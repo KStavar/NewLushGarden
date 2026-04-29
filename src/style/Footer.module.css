@@ -1,9 +1,11 @@
+/* Footer.module.css */
 .footer {
     background-color: rgb(40, 90, 67);
     height: 374px;
     margin-top: 120px;
     padding-top: 75px;
     position: relative;
+    z-index: 1; /* Явно задаем низкий приоритет слоя */
 }
 
 .divFooter {
