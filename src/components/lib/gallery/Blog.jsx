@@ -1,10 +1,10 @@
 import React from 'react'
 import styles from '@/style/Blog.module.css'
 
-// Функция для получения данных (можно вынести в отдельный файл api.js)
+
 async function getPosts() {
     const res = await fetch('http://localhost:1337/api/posts?populate=*', {
-        cache: 'no-store' // Чтобы данные всегда были свежими
+        cache: 'no-store' 
     });
     if (!res.ok) throw new Error('Failed to fetch posts');
     return res.json();
@@ -17,10 +17,9 @@ export default async function Blog() {
     return (
         <div className={styles.blog}>
             {posts.map((post) => {
-                // Извлекаем текст из структуры Rich Text (Description)
+
                 const descriptionText = post.Description?.[0]?.children?.[0]?.text || '';
                 
-                // Формируем полный путь к картинке
                 const imageUrl = post.Image?.url 
                     ? `${STRAPI_URL}${post.Image.url}` 
                     : '/placeholder.png';
