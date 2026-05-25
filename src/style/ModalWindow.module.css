@@ -85,3 +85,27 @@
   font-size: 16px;
   font-weight: 500;
 }
+
+/* Контейнер для всей формы */
+.reviewForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.ratingField {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.ratingLabel {
+  color: white;
+  font-size: 14px;
+}
+
+.textareaEmail {
+  min-height: 100px;
+  padding-top: 10px;
+  resize: none; /* Запрещаем пользователю растягивать поле мышкой */
+}

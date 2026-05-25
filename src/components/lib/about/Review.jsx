@@ -1,8 +1,8 @@
 'use client'
 import React, { useState } from 'react'
 import styles from '@/style/Review.module.css'
-import ModalWindow from '../../lib/ModalWindow'
-import ReviewForm from '../../lib/ReviewForm'
+import ModalWindow from '../../ui/ModalWindow'
+import ReviewForm from '../../ui/ReviewForm'
 
 export default function Review({ reviews }) {
   const [isOpen, setIsOpen] = useState(false);

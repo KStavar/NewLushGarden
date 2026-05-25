@@ -3,9 +3,9 @@ import Image from "next/image"
 import Link from "next/link"
 import headerStyles from '@/style/Header.module.css'
 import { useState } from "react"
-import ModalWindow from "../lib/ModalWindow"
+import ModalWindow from "./ModalWindow"
 import Contact from "./Contact"
-import ReviewForm from "../lib/ReviewForm"
+import ReviewForm from "./ReviewForm"
 
 export default function Header() {
   const [openContact, setOpenContact] = useState(false);
@@ -30,7 +30,7 @@ export default function Header() {
           <li className={headerStyles.navListItem}>
             <Link href="/gallery" className={headerStyles.navLink}>Gallery</Link>
           </li>
-          <li className={headerStyles.contactNavListItem} onClick={() => setOpenContact(!openContact)}>
+          <li className={headerStyles.contactNavListItem} onClick={() => setOpenContact(true)}>
             Contact
           </li>
           <li className={headerStyles.separatedNavListItem} onClick={() => setOpenReview(true)}>

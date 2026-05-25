@@ -15,7 +15,7 @@ export default function OfferSection({ plants }) {
       <div className={styles.divAllCactusPlants}>
         {plants.map((plant) => {
           const item = plant.attributes || plant;
-          
+
           const imagePath = item.IMG?.data?.attributes?.url || item.IMG?.url;
           const imageUrl = imagePath ? `${STRAPI_URL}${imagePath}` : null;
 
