@@ -3,7 +3,7 @@ import styles from '@/style/Blog.module.css'
 
 
 async function getPosts() {
-    const res = await fetch('http://localhost:1337/api/posts?populate=*', {
+    const res = await fetch('http://26.221.31.76:1337/api/posts?populate=*', {
         cache: 'no-store' 
     });
     if (!res.ok) throw new Error('Failed to fetch posts');
@@ -12,17 +12,14 @@ async function getPosts() {
 
 export default async function Blog() {
     const { data: posts } = await getPosts();
-    const STRAPI_URL = 'http://localhost:1337';
+    const STRAPI_URL = 'http://26.221.31.76:1337';
 
     return (
         <div className={styles.blog}>
             {posts.map((post) => {
 
                 const descriptionText = post.Description?.[0]?.children?.[0]?.text || '';
-                
-                const imageUrl = post.Image?.url 
-                    ? `${STRAPI_URL}${post.Image.url}` 
-                    : '/placeholder.png';
+                const imageUrl = post.Image?.url ? `${STRAPI_URL}${post.Image.url}` : '/placeholder.png';
 
                 return (
                     <div key={post.id} className={styles.divCards}>

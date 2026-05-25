@@ -15,10 +15,9 @@ export default function Review({ reviews }) {
           <h2 className={styles.h2WDTSAU}>What Do They Say About Us</h2>
         </div>
 
-        {/* Кнопка открытия */}
         <div className={styles.buttonContainer}>
           <button className={styles.addReviewBtn} onClick={() => setIsOpen(true)}>
-            Leave Your Review
+            Write Your Review
           </button>
         </div>
 

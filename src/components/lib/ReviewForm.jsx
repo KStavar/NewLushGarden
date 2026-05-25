@@ -10,7 +10,6 @@ export default function ReviewForm({ onClose }) {
   const sendReview = async (e) => {
     e.preventDefault()
     
-    // Проверка на всякий случай
     if (rating < 1 || rating > 10) {
       alert("Please enter a rating between 1 and 10");
       return;

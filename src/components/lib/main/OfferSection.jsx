@@ -2,7 +2,7 @@ import Image from "next/image"
 import styles from '@/style/OfferSection.module.css'
 
 export default function OfferSection({ plants }) {
-  const STRAPI_URL = "http://127.0.0.1:1337";
+  const STRAPI_URL = "http://26.221.31.76:1337";
 
   if (!plants || plants.length === 0) return null;
 

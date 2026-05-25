@@ -1,0 +1,12 @@
+{
+  "mainImage": {
+    "src": "/image-f-gallery.png",
+    "alt": "Main Gallery Image"
+  },
+  "subImages": [
+    { "id": 1, "src": "/img-f-gallery2.png", "alt": "Gallery 2" },
+    { "id": 2, "src": "/img-f-gallery3.png", "alt": "Gallery 3" },
+    { "id": 3, "src": "/img-f-gallery4.png", "alt": "Gallery 4" },
+    { "id": 4, "src": "/img-f-gallery5.png", "alt": "Gallery 5" }
+  ]
+}

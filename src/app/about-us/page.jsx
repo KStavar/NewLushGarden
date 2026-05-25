@@ -10,6 +10,7 @@ async function getReviews() {
     if (!res.ok) throw new Error('Failed to fetch');
     const json = await res.json();
     return json.data;
+    
   } catch (error) {
     console.error("Strapi Error:", error);
     return []; 
