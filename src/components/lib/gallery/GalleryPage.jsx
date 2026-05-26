@@ -13,7 +13,7 @@ export default function GalleryPage() {
                     <h2 className={styles.h2Gallery}>Gallery</h2>
                 </div>
 
-                <div className={styles['divH2Empty']}></div>
+                <div className={styles.divH2Empty}></div>
 
                 <div className={styles.divImages}>
                     <div className={styles.images}>
