@@ -6,11 +6,11 @@ import productsData from '@/data/aboutProducts.json'
 export default function AboutProducts() {
   return (
     <section className={styles.secAboutProducts}>
-      <div className={styles['divH2About']}>
-        <h2 className={styles['h2About']}>About Us</h2>
+      <div className={styles.divH2About}>
+        <h2 className={styles.h2About}>About Us</h2>
         </div>
 
-        <div className={styles['divH2Empty']}>
+        <div className={styles.divH2Empty}>
         </div>
 
 
